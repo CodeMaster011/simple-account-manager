@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LocalFileManagementService } from './services/local-file-management.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'simple-account-manager';
+  constructor(private s: LocalFileManagementService) {
+    s.getAllFiles();
+  }
 }

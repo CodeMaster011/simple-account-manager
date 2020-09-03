@@ -15,6 +15,7 @@ interface Address {
 }
 
 interface Ledger {
+  id?: string;
   name?: string;
   gstin?: string;
   address?: Address;
@@ -29,6 +30,7 @@ interface Ledger {
 }
 
 interface Invoice {
+  id?: string;
   no?: string;
   date?: string;
   fromAddr?: Address;
@@ -39,6 +41,7 @@ interface Invoice {
 }
 
 interface InvoiceItem {
+  id?: string;
   name?: string;
   unit?: string;
   quantity?: number;

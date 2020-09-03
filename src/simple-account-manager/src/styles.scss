@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/purple-green.css';
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 .material-icons {
@@ -25,3 +26,14 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+*:focus {
+  outline: none;
+}
+textarea:focus, input:focus, button:focus{
+  outline: none;
+}
+.selected-nav {
+  border-style: none none solid none !important;
+  border-color: #69f0ae !important;
+}
+// https://stackoverflow.com/questions/45089178/how-to-get-primary-or-accent-color-of-currently-applied-theme-in-angular-materia

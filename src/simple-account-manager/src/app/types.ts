@@ -1,4 +1,4 @@
-interface Company {
+export interface Company {
   id?: string;
   name?: string;
   gstin?: string;
@@ -7,14 +7,14 @@ interface Company {
   email?: string;
 }
 
-interface Address {
+export interface Address {
   line1?: string;
   line2?: string;
   stateCode?: number;
   stateName?: string;
 }
 
-interface Ledger {
+export interface Ledger {
   id?: string;
   name?: string;
   gstin?: string;
@@ -29,7 +29,7 @@ interface Ledger {
   type?: "ST" | "PE" | "TX" | "SE"
 }
 
-interface Invoice {
+export interface Invoice {
   id?: string;
   no?: string;
   date?: string;
@@ -40,7 +40,7 @@ interface Invoice {
   items?: InvoiceItem[];
 }
 
-interface InvoiceItem {
+export interface InvoiceItem {
   id?: string;
   name?: string;
   unit?: string;

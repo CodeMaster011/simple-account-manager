@@ -1,0 +1,62 @@
+<form [formGroup]="companyCreationForm" (ngSubmit)="onSubmit()">
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Ex. ABC Company">
+      <mat-error *ngIf="companyCreationForm.hasError('name') && !companyCreationForm.hasError('required')">
+        Please enter name of the company
+      </mat-error>
+      <mat-error *ngIf="companyCreationForm.hasError('required')">
+        Company name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label>GSTIN</mat-label>
+      <input matInput formControlName="gstin" placeholder="19ABCDE1234F1ZX">
+      <mat-error *ngIf="companyCreationForm.hasError('gstin')">
+        Please enter valid GSTIN of the company
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label>Address Line 1</mat-label>
+      <input matInput formControlName="addressLine1" placeholder="123 AB Road">
+      <mat-error *ngIf="companyCreationForm.hasError('addressLine1')">
+        Address must be more than 5 character.
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label>Address Line 2</mat-label>
+      <input matInput formControlName="addressLine2" placeholder="Kolkata 700 123">
+      <mat-error *ngIf="companyCreationForm.hasError('addressLine2')">
+        Address must be more than 5 character.
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone" placeholder="987643210">
+      <mat-error *ngIf="companyCreationForm.hasError('phone')">
+        Phone number must be valid.
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="abc@def.com">
+      <mat-error *ngIf="companyCreationForm.hasError('email')">
+        Email number must be valid.
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" type="submit">Update Profile</button>
+  </div>
+</form>
